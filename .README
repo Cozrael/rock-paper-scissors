@@ -1,0 +1,13 @@
+# Rock Paper Scissors
+
+Kő-papír-olló játék terminálban, Pythonban.
+
+## Indítás
+
+python main.py
+
+## Tervezett funkciók
+
+- Játék a gép ellen
+- Pontszámláló
+- Tesztek pytesttel
