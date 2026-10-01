@@ -1,11 +1,11 @@
 # Rock Paper Scissors
 
-A terminal-based Rock Paper Scissors game written in Python.
+A terminal-based Rock Paper Scissors game written in Python, with unit tests written in pytest.
 
 ## Requirements
 
 - Python 3.10 or newer (the game uses the `match` statement)
-- No external dependencies
+- `pytest` (only needed to run the tests)
 
 ## How to run
 
@@ -32,14 +32,24 @@ Enter your choice: rock
 You won! (rock > scissors)
 ```
 
+## Running the tests
+
+```
+pip install -r requirements.txt
+pytest -v
+```
+
+The tests cover all 9 choice combinations of `determine_winner` (computer win, player win, tie) using `pytest.mark.parametrize`.
+
 ## Features
 
 - Play against the computer
 - Input validation (case-insensitive, ignores extra spaces)
 - Loading animation while the computer chooses
 - Game logic separated from input/output (`determine_winner` returns the result)
+- Unit tests for the game logic with pytest
 
 ## Planned features
 
-- Unit tests with pytest
+- Tests for player input handling (using `monkeypatch`)
 - Best-of-three mode with a score counter
